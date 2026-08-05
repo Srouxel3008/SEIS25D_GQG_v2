@@ -14,14 +14,8 @@ on Windows through Ubuntu in Windows Subsystem for Linux (WSL).
 
 ## Capabilities
 
-- 2.5-D frequency-domain forward modeling;
-- elastic and viscoelastic attenuation models;
-- anisotropic parameterizations, including TTI;
-- synthetic and externally supplied spectral observations;
-- Fréchet derivatives and gradient calculation;
-- L-BFGS full-waveform inversion;
-- irregular source/receiver geometry and component pairing;
-- Intel oneMKL PARDISO, with optional MUMPS support for equipped systems.
+- 2.5-D frequency-domain forward modeling forelastic, viscoelastic and viscoelastic TTI media;
+- 2.5-D frequency-domain forward FWI for elastic, viscoelastic and viscoelastic TTI media; ;
 
 ## Supported workstation platform
 
@@ -108,7 +102,6 @@ The workstation launcher:
 - records total and available WSL/Linux memory and warns when memory is low;
 - creates a timestamped directory under `runs/Small_TTI`;
 - writes `run.log`, `error.log`, and `environment.txt`;
-- scans the completed logs for signs of an out-of-memory termination.
 
 Thread counts and input/output locations can be overridden when needed. See
 the [workstation guide](docs/WORKSTATION.md) for settings and monitoring.
@@ -151,8 +144,7 @@ reproduced.
 
 ## Documentation
 
-- [Standalone Word user manual](SEIS25D_GQG_Manual.docx)
-- [Typical-use tutorials](docs/TUTORIALS.md)
+- [Standalone Word user manual](SEIS25D_GQG_v2_Manual.docx)
 - [Build and run on a workstation](docs/WORKSTATION.md)
 - [Build and run on Slurm](docs/HPC.md)
 - [Prepare input files](docs/INPUT_FORMATS.md)

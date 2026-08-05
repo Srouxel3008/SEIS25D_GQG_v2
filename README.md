@@ -1,8 +1,6 @@
 # SEIS25D_GQG_v2
-2.5D frequency-domain viscoelastic anisotropic seismic modelling and full-waveform inversion (FWI) FORTRAN90 program.
-# SEIS25D_GQG
 
-SEIS25D_GQG is a Fortran research code for 2.5-D frequency-domain seismic
+SEIS25D_GQG _v2is a Fortran research code for 2.5-D frequency-domain seismic
 forward modeling, Fréchet derivative calculation, and full-waveform inversion (FWI)
 in elastic to viscoelastic anisotropic media.
 
@@ -27,25 +25,17 @@ on Windows through Ubuntu in Windows Subsystem for Linux (WSL).
 
 ## Supported workstation platform
 
-The supported workstation workflow is:
-
 - native Linux, or Ubuntu under WSL on Windows;
-- Intel Fortran compiler (`ifx`);
-- Intel MPI (`mpiifx` and `mpirun`);
-- Intel oneMKL;
-- GNU Make and Bash.
 
 Native Windows compilation is not currently supported. MUMPS is optional and
 is disabled in the standard workstation build.
 
-The bundled Small TTI example requires at least 16 GB of RAM and has been run
-successfully on a Lenovo Legion 5 laptop. The Marmousi example has been
-observed to require more than 170 GB of available RAM. It can run on a
+The bundled Small TTI example requires a minimum 10 GB available RAM but has been run
+successfully up to 22 Hz on a Lenovo Legion 5 laptop. The Marmousi_VSP example requires over 170 GB of available RAM. It can run on a
 sufficiently equipped high-memory workstation, although a multi-node cluster
-provides more CPU cores and substantially faster Fréchet-derivative
-calculations.
+is preferred.
 
-See [Building and running on a workstation](docs/WORKSTATION.md) for the full
+See [Building and running on a workstation](docs/WORKSTATION.md) [Building and running on HPC](docs/HPC.md)and for the full
 installation, compilation, execution and troubleshooting workflow.
 
 ## Get the complete code
@@ -66,13 +56,13 @@ Windows users should keep the complete extracted folder together and access it
 from Ubuntu/WSL. For example:
 
 ```text
-C:\Users\path\SEIS25D_GQG
+C:\Users\path\SEIS25D_GQG_v2
 ```
 
 is available inside WSL as:
 
 ```text
-/mnt/c/Users/path/SEIS25D_GQG
+/mnt/c/Users/path/SEIS25D_GQG_v2
 ```
 
 Users familiar with Git may instead clone the complete repository and run the

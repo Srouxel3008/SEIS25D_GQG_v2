@@ -14,8 +14,8 @@ on Windows through Ubuntu in Windows Subsystem for Linux (WSL).
 
 ## Capabilities
 
-- 2.5-D frequency-domain forward modeling forelastic, viscoelastic and viscoelastic TTI media;
-- 2.5-D frequency-domain forward FWI for elastic, viscoelastic and viscoelastic TTI media; ;
+- 2D/2.5D frequency-domain forward modeling forelastic, viscoelastic and viscoelastic TTI media;
+- 2D/2.5D frequency-domain forward FWI for elastic, viscoelastic and viscoelastic TTI media; ;
 
 ## Supported workstation platform
 
@@ -24,12 +24,12 @@ on Windows through Ubuntu in Windows Subsystem for Linux (WSL).
 Native Windows compilation is not currently supported. MUMPS is optional and
 is disabled in the standard workstation build.
 
-The bundled Small TTI example requires a minimum 10 GB available RAM but has been run
+The bundled Small TTI example requires a minimum of 10 GB available RAM but has been run
 successfully up to 22 Hz on a Lenovo Legion 5 laptop. The Marmousi_VSP example requires over 170 GB of available RAM. It can run on a
 sufficiently equipped high-memory workstation, although a multi-node cluster
-is preferred.
+is the preferred option.
 
-See [Building and running on a workstation](docs/WORKSTATION.md) [Building and running on HPC](docs/HPC.md)and for the full
+See [Building and running on a workstation](docs/WORKSTATION.md) or [Building and running on HPC](docs/HPC.md)for the full
 installation, compilation, execution and troubleshooting workflow.
 
 ## Get the complete code

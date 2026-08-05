@@ -1,16 +1,15 @@
 # SEIS25D_GQG_v2
 
-SEIS25D_GQG _v2is a Fortran research code for 2.5-D frequency-domain seismic
-forward modeling, Fréchet derivative calculation, and full-waveform inversion (FWI)
-in elastic to viscoelastic anisotropic media.
+SEIS25D_GQG _v2 is a Fortran90 research code for 2.5-D frequency-domain seismic
+forward modeling, and full-waveform inversion (FWI)
+in elastic to viscoelastic TTI media.
 
 The repository currently provides a small three-component tilted transverse
 isotropy (TTI) example that can be compiled and run on a Linux workstation or
 on Windows through Ubuntu in Windows Subsystem for Linux (WSL).
 
 > **Project status:** the code and documentation are being prepared for their
-> first public release. The Small TTI workstation workflow and the larger
-> Marmousi VSP cluster example are included.
+> first public release.
 
 ## Capabilities
 
@@ -29,7 +28,7 @@ successfully up to 22 Hz on a Lenovo Legion 5 laptop. The Marmousi_VSP example r
 sufficiently equipped high-memory workstation, although a multi-node cluster
 is the preferred option.
 
-See [Building and running on a workstation](docs/WORKSTATION.md) or [Building and running on HPC](docs/HPC.md)for the full
+See [Building and running on a workstation](docs/WORKSTATION.md) or [Building and running on HPC](docs/HPC.md) for the full
 installation, compilation, execution and troubleshooting workflow.
 
 ## Get the complete code
@@ -154,7 +153,7 @@ reproduced.
 
 ## Previous presentation
 
-Preliminary Results produced with this code were presented at the AGU25 Annual Meeting.
+Preliminary results produced with this code were presented at the AGU25 Annual Meeting.
 This repository is being prepared to accompany the first full publication of
 the software and methodology.
 
@@ -165,8 +164,7 @@ AGU25 Annual Meeting, presentation S33B-0258, abstract 1940271.
 
 ## Contact
 
-S. Rouxel  
-PhD in Earth Sciences, Khalifa University of Science and Technology  
+S. Rouxel PhD in Earth Sciences, Khalifa University of Science and Technology  
 Institutional email: [100061882@ku.ac.ae](mailto:100061882@ku.ac.ae)  
 Alternative email: [sedrouxelian@hotmail.com](mailto:sedrouxelian@hotmail.com)
 

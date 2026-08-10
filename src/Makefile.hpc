@@ -1,0 +1,32 @@
+# HPC build settings for SEIS25D_GQG
+#
+# Run from the repository root after loading the compiler/MPI/MKL modules:
+#   make -C src -f Makefile.hpc
+#
+# This HPC wrapper defaults to PARDISO. Set USE_MUMPS=1 to compile the optional
+# MUMPS pathway; the solver used at runtime is then selected in MainInput.inp.
+
+# ---------------------- Settings users may change ----------------------
+
+CONFIG       ?= release
+GF_STORAGE   ?= sp
+USE_MUMPS    ?= 0
+
+# `mpiifx` is expected after the Intel MPI module is loaded. A full compiler
+# path may instead be supplied on the command line with FC=/path/to/mpiifx.
+FC           ?= mpiifx
+
+# These settings are used only with USE_MUMPS=1 and match the MUMPS/ScaLAPACK
+# pathway used by the original HPC build. If the cluster module does not expose
+# MUMPS_DIR, pass it explicitly. Library names can also be overridden when a
+# site packages MUMPS differently.
+MUMPS_DIR    ?= $(shell printf '%s' "$$MUMPS_DIR")
+MUMPS_FFLAGS ?= -DBLR_MT
+MUMPS_LIBS   ?= -lzmumps -lmumps_common -lpord \
+                -lparmetis -lmetis \
+                -lptesmumps -lptscotch -lptscotcherr -lscotch \
+                -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64
+
+# The authoritative source list, dependency graph, compiler flags and targets
+# remain in the common Makefile so workstation and HPC builds cannot drift.
+include Makefile
